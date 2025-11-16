@@ -5,6 +5,7 @@ return {
 			require("lint").linters_by_ft = {
 				terraform = { "tflint" },
 				python = { "ruff" },
+				lua = {"luac"}
 			}
 
 			vim.api.nvim_create_autocmd({ "BufWritePost" }, {
