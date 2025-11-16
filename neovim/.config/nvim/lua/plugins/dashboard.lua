@@ -1,10 +1,47 @@
-return { {
-  'nvimdev/dashboard-nvim',
-  event = 'VimEnter',
-  opts = {
-    theme = 'hyper',
-    change_to_vcs_root = true,
+return {
+	{
+		"goolord/alpha-nvim",
+		dependencies = {
+			"nvim-mini/mini.icons",
+			"nvim-lua/plenary.nvim",
+		},
+		config = function()
+			local alpha = require("alpha")
+			local dashboard = require("alpha.themes.dashboard")
 
-  },
-  dependencies = { {'nvim-tree/nvim-web-devicons'}}
-} } 
+			-- Set header
+			dashboard.section.header.val = {
+				"                                                     ",
+				"  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
+				"  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ",
+				"  ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ",
+				"  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ",
+				"  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
+				"  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
+				"                                                     ",
+			}
+
+			-- Set menu
+			dashboard.section.buttons.val = {
+				dashboard.button("e", "  > New file", ":ene <BAR> startinsert <CR>"),
+				dashboard.button("f", "󰭎  > Find file", ":Telescope find_files<CR>"),
+				dashboard.button("r", "  > Recent", ":Telescope oldfiles<CR>"),
+				dashboard.button("d", "  > Dotfiles", ":Oil ~/dotfiles <CR>"),
+				dashboard.button("n", "  > Neovim config", ":Oil ~/.config/nvim <CR>"),
+				dashboard.button("u", "󰒲  > Update plugins", ":Lazy update<CR>"),
+				dashboard.button("q", "⨯  > Quit Neovim", ":qa<CR>"),
+			}
+			dashboard.section.footer.val = function()
+				local stats = require("lazy").stats()
+				local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
+				return { "⚡ Neovim loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms" }
+			end
+			alpha.setup(dashboard.opts)
+
+			-- Disable folding on alpha buffer
+			vim.cmd([[
+    autocmd FileType alpha setlocal nofoldenable
+]])
+		end,
+	},
+}
