@@ -1,3 +1,9 @@
+-- disable copilot manually because the annoying popup
+-- when free tier code completions have been reached
+if os.getenv("DISABLE_COPILOT") == "true" then
+	return {}
+end
+
 return {
 	{
 		"github/copilot.vim",

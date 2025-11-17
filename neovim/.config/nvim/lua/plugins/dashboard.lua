@@ -25,7 +25,7 @@ return {
 			dashboard.section.buttons.val = {
 				dashboard.button("e", "  > New file", ":ene <BAR> startinsert <CR>"),
 				dashboard.button("f", "󰭎  > Find file", ":Telescope find_files<CR>"),
-				dashboard.button("p", "󰭎  > Find project", ":Telescope project<CR>"),
+				dashboard.button("p", " > Find project", ":Telescope project<CR>"),
 				dashboard.button("r", "  > Recent", ":Telescope oldfiles<CR>"),
 				dashboard.button("d", "  > Dotfiles", ":cd ~/dotfiles |:Oil .<CR>"),
 				dashboard.button("n", "  > Neovim config", ":cd ~/.config/nvim | :Oil .<CR>"),
@@ -39,9 +39,8 @@ return {
 			end
 			alpha.setup(dashboard.opts)
 
-			vim.cmd([[
-    autocmd FileType alpha setlocal nofoldenable
-]])
+			vim.keymap.set("n", "<leader>a", "<cmd>Alpha<CR>", { desc = "Open [A]lpha" })
+			vim.cmd([[autocmd FileType alpha setlocal nofoldenable]])
 		end,
 	},
 }
