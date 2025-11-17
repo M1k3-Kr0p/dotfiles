@@ -29,6 +29,7 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				python = { "ruff_format", "ruff_organize_imports", "ruff_fix" },
+				go = { "goimports", "gofumpt", "golines" },
 				terraform = { "terraform" },
 				-- javascript = { "prettierd", "prettier", stop_after_first = true },
 			},
