@@ -25,9 +25,10 @@ return {
 			dashboard.section.buttons.val = {
 				dashboard.button("e", "  > New file", ":ene <BAR> startinsert <CR>"),
 				dashboard.button("f", "󰭎  > Find file", ":Telescope find_files<CR>"),
+				dashboard.button("p", "󰭎  > Find project", ":Telescope project<CR>"),
 				dashboard.button("r", "  > Recent", ":Telescope oldfiles<CR>"),
-				dashboard.button("d", "  > Dotfiles", ":Oil ~/dotfiles <CR>"),
-				dashboard.button("n", "  > Neovim config", ":Oil ~/.config/nvim <CR>"),
+				dashboard.button("d", "  > Dotfiles", ":cd ~/dotfiles |:Oil .<CR>"),
+				dashboard.button("n", "  > Neovim config", ":cd ~/.config/nvim | :Oil .<CR>"),
 				dashboard.button("u", "󰒲  > Update plugins", ":Lazy update<CR>"),
 				dashboard.button("q", "⨯  > Quit Neovim", ":qa<CR>"),
 			}
@@ -38,7 +39,6 @@ return {
 			end
 			alpha.setup(dashboard.opts)
 
-			-- Disable folding on alpha buffer
 			vim.cmd([[
     autocmd FileType alpha setlocal nofoldenable
 ]])
