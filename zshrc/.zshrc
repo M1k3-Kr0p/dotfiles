@@ -26,18 +26,13 @@ autoload -Uz compinit && compinit
 
 plugins=(
     git
-    docker
-    asdf
-    zsh-autosuggestions
-    zsh-completions 
-    zsh-history-substring-search 
-    zsh-syntax-highlighting
 )
 
-alias csync="git -C ~/dotfiles pull && git -C ~/.config/nvim pull"
+alias dsync="git -C ~/dotfiles pull"
 alias src="source ~/.zshrc"
 alias k="kubectl"
 alias vi="nvim"
+alias tf="terraform"
 alias awsshell="aws-vault exec"
 alias gst="git status"
 
@@ -46,7 +41,12 @@ export EDITOR="nvim"
 export NVM_DIR="$HOME/.nvm"
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+  export AWS_VAULT_BACKEND="pass"
+  export AWS_VAULT_PASS_PASSWORD_STORE_DIR="$HOME/.password-store/aws-vault"
+  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
 
 source <(fzf --zsh)
 eval "$(starship init zsh)"
