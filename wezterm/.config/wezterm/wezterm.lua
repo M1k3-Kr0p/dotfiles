@@ -3,7 +3,7 @@ local w = require("wezterm")
 local smart_splits = w.plugin.require("https://github.com/mrjones2014/smart-splits.nvim")
 local config = w.config_builder()
 
-function getOS()
+local function get_os()
 	local sep = package.config:sub(1, 1)
 
 	if sep == "\\" then
@@ -22,7 +22,7 @@ function getOS()
 	return "macOS"
 end
 
-local os_name = getOS()
+local os_name = get_os()
 
 config.color_scheme = "Batman"
 config.font = w.font("JetBrains Mono")
@@ -36,12 +36,16 @@ config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = true
 config.tab_bar_at_bottom = false
 config.show_new_tab_button_in_tab_bar = true
+config.inactive_pane_hsb = {
+	saturation = 0.5,
+	brightness = 0.8,
+}
 
 config.window_decorations = "RESIZE"
 
 config.cursor_blink_rate = 800
 config.default_cursor_style = "SteadyBlock"
-config.max_fps = 120
+config.max_fps = 60
 
 -- Windows overwrites
 if os_name == "Windows" then
