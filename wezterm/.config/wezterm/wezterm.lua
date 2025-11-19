@@ -29,8 +29,8 @@ config.font = w.font("JetBrains Mono")
 config.window_padding = {
 	left = 3,
 	right = 3,
-	top = 3,
-	bottom = 1,
+	top = 0,
+	bottom = 0,
 }
 config.window_frame = {
 	inactive_titlebar_bg = "#353535",
@@ -44,7 +44,9 @@ config.window_frame = {
 	button_hover_fg = "#ffffff",
 	button_hover_bg = "#3b3052",
 }
+config.window_close_confirmation = "NeverPrompt"
 config.hide_tab_bar_if_only_one_tab = false
+config.font_size = 12.5
 config.use_fancy_tab_bar = true
 config.tab_bar_at_bottom = false
 config.show_new_tab_button_in_tab_bar = true
