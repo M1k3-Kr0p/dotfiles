@@ -32,18 +32,20 @@ config.window_padding = {
 	top = 0,
 	bottom = 0,
 }
+
 config.window_frame = {
-	inactive_titlebar_bg = "#353535",
-	active_titlebar_bg = "#2b2042",
-	inactive_titlebar_fg = "#cccccc",
-	active_titlebar_fg = "#ffffff",
-	inactive_titlebar_border_bottom = "#2b2042",
-	active_titlebar_border_bottom = "#2b2042",
-	button_fg = "#cccccc",
-	button_bg = "#2b2042",
-	button_hover_fg = "#ffffff",
-	button_hover_bg = "#3b3052",
+	inactive_titlebar_bg = "#1B1B1B",
+	active_titlebar_bg = "#111111",
+	inactive_titlebar_fg = "#6F6F6F",
+	active_titlebar_fg = "#DCDCDC",
+	inactive_titlebar_border_bottom = "#2A2A2A",
+	active_titlebar_border_bottom = "#3A3A3A",
+	button_fg = "#6F6F6F",
+	button_bg = "#111111",
+	button_hover_fg = "#FFFFFF",
+	button_hover_bg = "#2A2A2A",
 }
+
 config.window_close_confirmation = "NeverPrompt"
 config.hide_tab_bar_if_only_one_tab = false
 config.font_size = 12.5
@@ -55,7 +57,7 @@ config.inactive_pane_hsb = {
 	brightness = 0.8,
 }
 
-config.underline_thickness = "5px"
+config.underline_thickness = "2.5px"
 config.window_decorations = "RESIZE"
 
 config.cursor_blink_rate = 800
