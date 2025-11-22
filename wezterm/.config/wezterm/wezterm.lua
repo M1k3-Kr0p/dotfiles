@@ -73,6 +73,11 @@ end
 config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = {
 	{
+		key = "a",
+		mods = "LEADER|CTRL",
+		action = w.action.SendKey({ key = "a", mods = "CTRL" }),
+	},
+	{
 		mods = "LEADER",
 		key = "-",
 		action = w.action.SplitVertical({ domain = "CurrentPaneDomain" }),
