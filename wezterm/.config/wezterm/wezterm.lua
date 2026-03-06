@@ -24,26 +24,13 @@ end
 
 local os_name = get_os()
 
-config.color_scheme = "Batman"
+config.color_scheme = "Tokyo Night"
 config.font = w.font("JetBrains Mono")
 config.window_padding = {
 	left = 3,
 	right = 3,
 	top = 0,
 	bottom = 0,
-}
-
-config.window_frame = {
-	inactive_titlebar_bg = "#1B1B1B",
-	active_titlebar_bg = "#111111",
-	inactive_titlebar_fg = "#6F6F6F",
-	active_titlebar_fg = "#DCDCDC",
-	inactive_titlebar_border_bottom = "#2A2A2A",
-	active_titlebar_border_bottom = "#3A3A3A",
-	button_fg = "#6F6F6F",
-	button_bg = "#111111",
-	button_hover_fg = "#FFFFFF",
-	button_hover_bg = "#2A2A2A",
 }
 
 config.window_close_confirmation = "NeverPrompt"
@@ -72,6 +59,11 @@ end
 -- Keymaps
 config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
 config.keys = {
+	{
+		key = "w",
+		mods = "CMD",
+		action = w.action.CloseCurrentTab({ confirm = true }),
+	},
 	{
 		key = "a",
 		mods = "LEADER|CTRL",

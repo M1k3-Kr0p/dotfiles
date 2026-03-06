@@ -19,20 +19,16 @@ truncate_to_repo = false
 
 [aws]
 format = '(\(aws:[$profile]($style)\)) '
-#style = '#ffff36'
 style = 'white'
 
 [git_branch]
 format = '\([$symbol$branch]($style)\)'
-style = '#ffff36'
 
 [git_status]
 format = '(\[[$modified$staged]($style)\])'
 modified = '*'
-style = '#0fc3ff'
 
 [kubernetes]
 format = '\(k8s:[$context( \($namespace\))]($style)\) '
-#style = '#ffff36'
 style = 'white'
 disabled = false
