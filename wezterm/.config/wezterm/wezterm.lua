@@ -3,27 +3,6 @@ local w = require("wezterm")
 local smart_splits = w.plugin.require("https://github.com/mrjones2014/smart-splits.nvim")
 local config = w.config_builder()
 
-local function get_os()
-	local sep = package.config:sub(1, 1)
-
-	if sep == "\\" then
-		return "Windows"
-	end
-
-	local handle = io.popen("uname")
-	local result = handle:read("*a")
-
-	handle:close()
-	result = result:lower()
-
-	if result:find("linux") then
-		return "Linux"
-	end
-	return "macOS"
-end
-
-local os_name = get_os()
-
 config.color_scheme = "Tokyo Night"
 config.font = w.font("JetBrains Mono")
 config.window_padding = {
@@ -50,11 +29,6 @@ config.window_decorations = "RESIZE"
 config.cursor_blink_rate = 800
 config.default_cursor_style = "SteadyBlock"
 config.max_fps = 120
-
--- Windows overwrites
-if os_name == "Windows" then
-	config.default_domain = "WSL:Ubuntu"
-end
 
 -- Keymaps
 config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
