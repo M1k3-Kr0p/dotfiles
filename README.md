@@ -39,8 +39,7 @@ stow tmux
 stow zshrc
 stow wezterm
 stow homebrew
-```
 
-```zsh
+
 brew bundle dump --file ${HOME}/.Brewfile --force
 ```
