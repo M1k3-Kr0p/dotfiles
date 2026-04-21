@@ -41,5 +41,5 @@ stow wezterm
 stow homebrew
 
 
-brew bundle dump --file ${HOME}/.Brewfile --force
+brew bundle dump --file ${HOME}/Brewfile --force
 ```
