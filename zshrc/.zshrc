@@ -44,14 +44,5 @@ export AWS_PAGER=""
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  export AWS_VAULT_BACKEND="pass"
-  export AWS_VAULT_PASS_PASSWORD_STORE_DIR="$HOME/.password-store/aws-vault"
-  export GPG_TTY=$(tty)
-  export BROWSER="/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe"
-  alias op="/mnt/c/Users/nvanderkant/AppData/Local/Microsoft/WinGet/Packages/AgileBits.1Password.CLI_Microsoft.Winget.Source_8wekyb3d8bbwe/op.exe"
-  eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-fi
-
 source <(fzf --zsh)
 eval "$(starship init zsh)"
