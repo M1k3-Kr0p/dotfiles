@@ -141,6 +141,16 @@ return {
 			local servers = {
 				gopls = {},
 				basedpyright = {},
+				yamlls = {
+					settings = {
+						yaml = {
+							schemas = {
+								kubernetes = "/*.yaml",
+							},
+							validate = true,
+						},
+					},
+				},
 
 				lua_ls = {
 					settings = {
