@@ -36,10 +36,11 @@ alias vim="nvim"
 alias tf="terraform"
 alias awsshell="aws-vault exec"
 alias gst="git status"
+alias note="nvim ~/notes.md"
 
 export KUBECONFIG=~/.kube/config
 export EDITOR="nvim"
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="$(brew --prefix nvm)"
 export AWS_PAGER=""
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

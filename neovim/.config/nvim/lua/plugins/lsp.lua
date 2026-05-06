@@ -151,6 +151,7 @@ return {
 						},
 					},
 				},
+				jsonls = {},
 
 				lua_ls = {
 					settings = {
