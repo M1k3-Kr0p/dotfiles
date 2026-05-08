@@ -11,6 +11,19 @@ return {
 			"saghen/blink.cmp",
 		},
 		config = function()
+			-- Workaround: terraform-ls returns invalid semantic token lengths
+			-- causing an infinite loop in neovim's semantic_tokens.lua
+			-- See: https://github.com/neovim/neovim/issues/36257
+			vim.api.nvim_create_autocmd("LspAttach", {
+				group = vim.api.nvim_create_augroup("lsp-disable-semantic-tokens", { clear = true }),
+				callback = function(args)
+					local client = vim.lsp.get_client_by_id(args.data.client_id)
+					if client and client.name == "terraformls" and client.server_capabilities then
+						client.server_capabilities.semanticTokensProvider = nil
+					end
+				end,
+			})
+
 			vim.api.nvim_create_autocmd("LspAttach", {
 				group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
 				callback = function(event)

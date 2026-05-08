@@ -9,14 +9,16 @@ return {
 				"bash",
 				"c",
 				"diff",
+				"hcl",
 				"html",
+				"json",
 				"lua",
 				"luadoc",
 				"markdown",
+				"terraform",
 				"vim",
 				"vimdoc",
 				"yaml",
-				"json",
 			})
 
 			vim.api.nvim_create_autocmd("FileType", {
