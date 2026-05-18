@@ -8,7 +8,7 @@ return {
 
 			{ "j-hui/fidget.nvim", opts = {} },
 
-			"saghen/blink.cmp",
+			{ "saghen/blink.cmp", dependencies = { "saghen/blink.lib" } },
 		},
 		config = function()
 			-- Workaround: terraform-ls returns invalid semantic token lengths

@@ -37,6 +37,7 @@ alias tf="terraform"
 alias awsshell="aws-vault exec"
 alias gst="git status"
 alias note="nvim ~/notes.md"
+alias unfuck="git reset --soft HEAD~1"
 
 export KUBECONFIG=~/.kube/config
 export EDITOR="nvim"
