@@ -149,6 +149,7 @@ return {
 
 			vim.keymap.set("n", "<leader>ds", show_diagnostics)
 			vim.keymap.set("n", "<leader>dh", hide_diagnostics)
+			vim.lsp.inlay_hint.enable()
 
 			local capabilities = require("blink.cmp").get_lsp_capabilities()
 			local servers = {
