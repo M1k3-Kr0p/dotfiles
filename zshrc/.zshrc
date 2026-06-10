@@ -29,6 +29,7 @@ plugins=(
 )
 
 alias dsync="git -C ~/dotfiles pull"
+alias dpush="brew bundle dump --file ${HOME}/Brewfile --force && git -C ~/dotfiles add . && git -C ~/dotfiles commit -m 'Update Brewfile' && git -C ~/dotfiles push"
 alias src="source ~/.zshrc"
 alias k="kubectl"
 alias vi="nvim"

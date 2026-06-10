@@ -3,7 +3,7 @@ local w = require("wezterm")
 local smart_splits = w.plugin.require("https://github.com/mrjones2014/smart-splits.nvim")
 local config = w.config_builder()
 
-config.color_scheme = "Tokyo Night"
+config.color_scheme = 'Ciapre (Gogh)'
 config.font = w.font("JetBrains Mono")
 config.window_padding = {
 	left = 3,
