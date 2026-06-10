@@ -1,8 +1,3 @@
-export ZSH="$HOME/.oh-my-zsh"
-
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="Eastwood"
-
 zstyle ':omz:update' mode reminder
 
 # Uncomment the following line if pasting URLs and other text is messed up.
@@ -16,8 +11,6 @@ zstyle ':omz:update' mode reminder
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
-
-source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -49,3 +42,5 @@ export AWS_PAGER=""
 
 source <(fzf --zsh)
 eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
+\nexport PATH="$PATH:$HOME/go/bin"
