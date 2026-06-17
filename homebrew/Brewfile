@@ -1,24 +1,45 @@
 tap "fforster/gitlab-mcp", "https://gitlab.com/fforster/homebrew-gitlab-mcp.git"
+# Open-source, cross-platform JavaScript runtime environment
 brew "node"
+# AWS Cloud Development Kit - framework for defining AWS infra as code
 brew "aws-cdk"
+# Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima"
+# Pack, ship and run any application as a lightweight container
 brew "docker"
+# Command-line fuzzy finder written in Go
 brew "fzf"
+# Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Kubernetes CLI To Manage Your Clusters In Style!
 brew "k9s"
+# Kubernetes command-line interface
 brew "kubernetes-cli"
+# Incremental parsing library
 brew "tree-sitter"
+# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Interpreted, interactive, object-oriented programming language
 brew "python@3.14"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Cross-shell prompt for astronauts
 brew "starship"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
+# Shell extension to navigate your filesystem faster
 brew "zoxide"
-brew "fforster/gitlab-mcp/gitlab-mcp"
+# API development platform
 cask "apidog"
+# Brings the power of Copilot coding agent directly to your terminal
 cask "copilot-cli"
+# GIT client
 cask "fork"
+# Open-source code editor
 cask "visual-studio-code"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
 vscode "charliermarsh.ruff"
 vscode "dahong.theme-bear"
