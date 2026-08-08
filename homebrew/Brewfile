@@ -4,9 +4,13 @@ brew "node"
 # AWS Cloud Development Kit - framework for defining AWS infra as code
 brew "aws-cdk"
 # Container runtimes on MacOS (and Linux) with minimal setup
-brew "colima"
+brew "colima", restart_service: :changed
 # Pack, ship and run any application as a lightweight container
 brew "docker"
+# Isolated development environments using Docker
+brew "docker-compose"
+# Platform keystore credential helper for Docker
+brew "docker-credential-helper"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Open source programming language to build simple/reliable/efficient software
@@ -27,8 +31,12 @@ brew "ripgrep"
 brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# Parser generator tool
+brew "tree-sitter-cli"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
+# Sends magic packets to wake up network-devices
+brew "wakeonlan"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # API development platform
@@ -41,13 +49,22 @@ cask "fork"
 cask "visual-studio-code"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
+vscode "atomiks.moonlight"
 vscode "charliermarsh.ruff"
 vscode "dahong.theme-bear"
+vscode "github.copilot-chat"
+vscode "golang.go"
 vscode "ms-python.debugpy"
 vscode "ms-python.mypy-type-checker"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
 vscode "ms-python.vscode-python-envs"
+vscode "ms-vscode-remote.remote-ssh"
+vscode "ms-vscode-remote.remote-ssh-edit"
+vscode "ms-vscode.remote-explorer"
+vscode "premparihar.gotestexplorer"
 vscode "vscodevim.vim"
+go "github.com/go-delve/delve/cmd/dlv"
 go "golang.org/x/tools/gopls"
+go "github.com/cweill/gotests/gotests"
 npm "tree-sitter-cli"
