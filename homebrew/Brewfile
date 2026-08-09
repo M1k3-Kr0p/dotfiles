@@ -41,8 +41,12 @@ brew "wakeonlan"
 brew "zoxide"
 # API development platform
 cask "apidog"
+# Terminal-based AI coding assistant
+cask "claude-code"
 # Brings the power of Copilot coding agent directly to your terminal
 cask "copilot-cli"
+# App to build and share containerised applications and microservices
+cask "docker-desktop"
 # GIT client
 cask "fork"
 # Open-source code editor
@@ -52,7 +56,6 @@ cask "wezterm"
 vscode "atomiks.moonlight"
 vscode "charliermarsh.ruff"
 vscode "dahong.theme-bear"
-vscode "github.copilot-chat"
 vscode "golang.go"
 vscode "ms-python.debugpy"
 vscode "ms-python.mypy-type-checker"
